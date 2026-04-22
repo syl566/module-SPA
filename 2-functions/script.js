@@ -19,9 +19,7 @@ const object = {
     threeDimensions: false,
 
     showThis: function () {
-        setTimeout(() => {
-            console.log(`${this.color} a ${this.shape}`);
-        }, false);
+        console.log(`${this.color} a ${this.shape}`);
     }
 };
 
@@ -36,10 +34,12 @@ const odile = {
         last: 'Crok'
     },
     age: 23,
-    //sayHello: ...
-    //sayMyName:...
-    //sayMyAge:...
-};
+}
+//sayHello:...
+//sayMyName: ..
+//sayMyAge: ..
+
+
 
 //odile.sayHello()
 //odile.sayMyName()
