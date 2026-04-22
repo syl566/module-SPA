@@ -1,8 +1,8 @@
 //1.1 Types simples
 
-var name = 'Jacques';
-var age = 80;
-var useless = 'something';
+let name = 'Jacques';
+let age = 80;
+let useless = 'something';
 
 console.log(name, age, useless);
 
@@ -14,9 +14,11 @@ console.log(name, age, useless);
 //----------------------//
 //1.2 Tableaux
 
-let fruits = ['apple', 'pear', 'cherry'];
-let vegetables = ['potato', 'curlyflower', 'tomato'];
+const fruits = ['apple', 'pear', 'cherry'];
+const vegetables = ['potato', 'curlyflower', 'tomato'];
 
+//En remplaçant let par const sur le tableau fruits et vegetables une erreur apparait "erreur de type non interceptée: affectation à une variable constante"//
+// pour résoudre cette problèmatique le console m'indisue de supprimer la ligne saveGame = {};//
 console.log(fruits, vegetables);
 
 fruits.push('banana');
@@ -27,14 +29,14 @@ console.log(fruits, vegetables);
 //----------------------//
 //1.3 Objets
 
-let settings = {
+const settings = {
     sound: true,
     music: false,
     graphics: 'high',
     resolution: [1920, 1080]
 };
 
-let savedGame = {
+const savedGame = {
     time: 384,
     score: 47,
     opponent: 'Lolo'
@@ -42,7 +44,7 @@ let savedGame = {
 
 console.log(settings, savedGame);
 
-savedGame = {};
+//savedGame = {};//
 settings.music = true;
 settings.resolution = [3840, 2160];
 
