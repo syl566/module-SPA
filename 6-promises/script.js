@@ -1,24 +1,24 @@
 // Fonction utilisées par les fonctions de l'exercice - Ne pas modifier ou appeler directement
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 // Note : les fonctions ci-dessous sont prêtes à l'emploi, vous n'avez pas à les modifier, juste à les appeler.
 // Elles retournent toutes des promesses et peuvent donc être chaînées via la fonction "then".
 function first() {
-  return sleep(300).then(() => {console.log('message 1');});
+    return sleep(300).then(() => { console.log('message 1'); });
 }
 
 function second() {
-  return sleep(100).then(() => {console.log('message 2');});
+    return sleep(100).then(() => { console.log('message 2'); });
 }
 
 function third() {
-  return sleep(200).then(() => {console.log('message 3');});
+    return sleep(200).then(() => { console.log('message 3'); });
 }
 
 function secondWithError() {
-  return sleep(100).then(() => {throw new Error("catch me if you can");})
+    return sleep(100).then(() => { throw new Error("catch me if you can"); })
 }
 
 first();   // Affiche "message 1" après 300ms  
@@ -33,8 +33,9 @@ secondWithError().catch(error => console.error(error.message));
 
 
 // Fonction qui récupère les humains (id 1)
+
 function getSpecies() {
-    return fetch('http://127.0.0.1:5500/module-SPA/6-promises/species.json')
+    return fetch('https://swapi.info/api/species/1/')
         .then(response => response.json())
         .then(species => {
             console.log('Espèce :', species.name);
@@ -45,7 +46,7 @@ function getSpecies() {
 function getFirstPerson() {
     return getSpecies()
         .then(species => {
-            const firstPersonUrl = species.people[0];
+            const firstPersonUrl = species.people[2];
             console.log('URL du personnage :', firstPersonUrl);
             return fetch(firstPersonUrl);
         })
@@ -55,6 +56,7 @@ function getFirstPerson() {
             return person;
         });
 }
+
 
 getFirstPerson();
 
@@ -70,10 +72,10 @@ function getAllPeople() {
 
         // transforme chaque personne en fiche lisible
         .then(people => people.map(person => ({
-            nom:    person.name,
+            nom: person.name,
             taille: `${person.height} cm`,
-            poids:  `${person.mass} kg`,
-            yeux:   person.eye_color
+            poids: `${person.mass} kg`,
+            yeux: person.eye_color
         })))
 
         // On affiche les fiches
@@ -91,3 +93,4 @@ function getAllPeople() {
 }
 
 getAllPeople();
+

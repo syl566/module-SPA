@@ -1,8 +1,0 @@
-{
-    "name": "Human",
-    "people": [
-        "http://127.0.0.1:5500/module-SPA/6-promises/luke.json",
-        "http://127.0.0.1:5500/module-SPA/6-promises/leia.json",
-        "http://127.0.0.1:5500/module-SPA/6-promises/han.json"
-    ]
-}

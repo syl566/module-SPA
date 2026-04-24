@@ -133,7 +133,7 @@ Exporter les fonctions du fichier `math.js` pour pouvoir les utiliser dans le sc
 
 Regarder l'API fetch (https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch), qui fait une requête http et retourne la réponse sous la forme d'une promise.
 
-Vous allez ensuite utiliser fetch pour faire des appels à l'API  Star Wars (https://swapi.dev/).
+Vous allez ensuite utiliser fetch pour faire des appels à l'API  Star Wars (https://swapi.info/).
 
 1. Écrire une fonction qui fait une requête pour récupérer les caractéristiques de l'espèce avec l'id 1 (les humains).
 2. Écrire une fonction, qui va chaîner l'appel à la fonction précédente pour récupérer les caractéristique du premier personnage du tableau people.
