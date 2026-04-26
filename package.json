@@ -1,0 +1,20 @@
+{
+  "name": "module-spa",
+  "version": "1.0.0",
+  "description": "HEAD # module-SPA Ce module vous permet d'acquérir les compétences fondamentales du développement front-end moderne, depuis les bases de JavaScript ES6+ jusqu'à la réalisation d'une Single Page Application complète avec Vue.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syl566/module-SPA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syl566/module-SPA/issues"
+  },
+  "homepage": "https://github.com/syl566/module-SPA#readme"
+}

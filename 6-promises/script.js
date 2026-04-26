@@ -94,3 +94,19 @@ function getAllPeople() {
 
 getAllPeople();
 
+//RÉCUPÈRE LES BOUTONS
+const btnOk     = document.getElementById('btnOk');
+const btnCancel = document.getElementById('btnCancel');
+
+//FONCTION QUI RETOURNE UNE PROMISE QUI SE RÉSOLVRA QUAND L'UN DES BOUTONS SERA CLIQUÉ
+function waitForClick() {
+  return new Promise((resolve, reject) => {
+    btnOk.addEventListener('click',     () => resolve('Ok clicked'),     { once: true });
+    btnCancel.addEventListener('click', () => reject('Cancel clicked'),  { once: true });
+  });
+}
+
+//UTILISE LA PROMISE POUR AFFICHER UN MESSAGE QUAND L'UN DES BOUTONS EST CLIQUÉ
+waitForClick()
+  .then(msg  => console.log(msg))
+  .catch(msg => console.log(msg));
